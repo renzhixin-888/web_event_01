@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大事件-登录/注册</title>
+    <!-- 字体图标 -->
+    <link rel="shortcut icon" href="/assets/images/logo-ico.ico">
+    <!-- 引入 layui 样式 -->
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <!-- 引入自己的样式 -->
+    <link rel="stylesheet" href="/assets/css/login.css">
+</head>
+
+<body>
+    <!-- logo 区域 -->
+    <div class="layui-main">
+        <img src="/assets/images/logo.png" alt="">
+    </div>
+
+    <!-- 登录注册区域 -->
+    <div class="loginAndRegBox">
+        <div class="title-box"></div>
+        <!-- 登录表单 -->
+        <div class="login-box">
+            <form class="layui-form" id="form_login">
+                <!-- 用户名 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username" style="font-size: 20px; color: #1E9FFF;"></i>
+                    <input type="text" name="username" value="renzhixin" required lay-verify="required" placeholder="请输入用户名"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <!-- 密码 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password" style="font-size: 20px; color: #1E9FFF;"></i>
+                    <input type="text" name="password" value="123456" required lay-verify="required|pwd" placeholder="请输入密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <!-- 注册按钮 -->
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>登 录</button>
+                </div>
+                <!-- 跳转链接 a -->
+                <div class="layui-form-item aaaa">
+                    <a id="link_reg" href="javascript:;">去注册账号</a>
+                </div>
+            </form>
+        </div>
+        <!-- 注册表单 -->
+        <div class="reg-box" style="display: none;">
+            <form class="layui-form" id="form_reg">
+                <!-- 用户名 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username" style="font-size: 20px; color: #1E9FFF;"></i>
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <!-- 密码 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password" style="font-size: 20px; color: #1E9FFF;"></i>
+                    <input type="type" name="password" required lay-verify="required|pwd" placeholder="请输入密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <!-- 再次确认密码 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password" style="font-size: 20px; color: #1E9FFF;"></i>
+                    <input type="type" name="repassword" required lay-verify="required|pwd|repwd" placeholder="请再次输入密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <!-- 登录按钮 -->
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>注 册</button>
+                </div>
+                <!-- 跳转链接 a -->
+                <div class="layui-form-item aaaa">
+                    <a id="link_login" href="javascript:;">去登录</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 引入layui.all.js 文件 因为此文件中没有使用window.load所以要写在最下面-->
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <!-- 引入 jQuery -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- 引入 baseAPI 文件 -->
+    <script src="/assets/js/baseAPI.js"></script>
+    <!-- 引入自己的 js 脚本 -->
+    <script src="/assets/js/login.js"></script>
+</body>
+
+</html>
