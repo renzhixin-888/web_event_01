@@ -14,7 +14,7 @@ $(function () {
     var form = layui.form;
     form.verify({
         // 自定义验证规则
-        pwd: [/^[\S]{6,12}$/, '密码必须是6-16位，且不能输入空格'],
+        pwd: [/^[\S]{6,12}$/, '密码必须是6-12位，且不能输入空格'],
         repwd: function (value) {
             var pwd = $('.reg-box input[name = password]').val()
             if (pwd !== value) {
