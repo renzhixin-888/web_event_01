@@ -11,7 +11,7 @@ $.ajaxPrefilter(function (options) {
     }
     // 3.拦截所有响应，判断身份认证信息
     options.complete = function (res) {
-        console.log(res)
+        // console.log(res)
         // 判断如果身份验证失败，则强制跳转到登录页面
         if (res.responseJSON.status === 1 && res.responseJSON.message === "身份认证失败！") {
             // 删除本地存储

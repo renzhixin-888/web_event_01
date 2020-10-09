@@ -16,6 +16,8 @@ $(function () {
 });
 // getUserInfo();
 
+
+// 获取用户信息
 function getUserInfo() {
     $.ajax({
         method:'GET',
@@ -24,7 +26,7 @@ function getUserInfo() {
         //     Authorization:localStorage.getItem("token") || ""
         // },
         success: function (res) {
-            console.log(res)
+            // console.log(res)
             // 判断是否获取信息成功
             if (res.status !== 0) {
                 return layui.layer.msg(res.message)

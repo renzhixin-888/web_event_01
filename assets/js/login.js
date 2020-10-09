@@ -64,7 +64,7 @@ $(function () {
             // 快速获取表单中的元素
             data: $(this).serialize(),
             success: function (res) {
-                // console.log(res)
+                console.log(res)
                 // 判断若已将有了该用户名则return
                 if (res.status !== 0) {
                     return layer.msg(res.message);
