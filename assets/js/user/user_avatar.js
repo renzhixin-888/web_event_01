@@ -28,9 +28,9 @@ $('#file').on('change', function (e) {
         return layer.msg("请输入用户的头像")
     }
 
-    var file = e.target.files[0]
+    var file = e.target.files[0];
 
-    var newImgURL = URL.createObjectURL(file)
+    var newImgURL = URL.createObjectURL(file);
 
     $image
         .cropper('destroy')      // 销毁旧的裁剪区域
